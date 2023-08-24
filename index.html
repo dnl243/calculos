@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/master.css">
   <title>Document</title>
 </head>
 <body>
-
-
-  <input type="number" name="userAnswer" id="userAnswer">
-
-  <input type="button" id="compareButton" value="Responder">
-
+  <section>
+    <div class="contenedor_operacion">
+      <div class="operacion" id="nro1"></div>
+      <div class="operacion" id="signo"></div>
+      <div class="operacion" id="nro2"></div>
+    </div>
+    <div class="contenedor_respuesta">
+      <div>
+        <input class="respuesta" type="number" id="userAnswer" name="userAnswer">
+      </div>
+      <div>
+        <input class="responder" type="button" id="compareButton" value="RESPONDER">
+      </div>
+      <div class="contenedor_img">
+        <img class="img_respuesta" id="img-res" src="./img/sonic-en-espera.webp" alt="imagen-respuesta">
+      </div>
+    </div>
+    <div class="contenedor_resultado">
+      <p class="resultado" id="resultado"></p>
+    </di>
+  </section>
   <script src="./js/master.js"></script>
-
 </body>
 </html>

@@ -23,8 +23,21 @@ function chooseRandomOperation() {
 }
 var operation = chooseRandomOperation();
 
-// Mostrar operacion
-document.write('<h1>'+ randomNumber +' '+ operation +' '+ randomNumber2 +'</h1>')
+// Captura de elementos
+var nro1 = document.getElementById('nro1');
+var signo = document.getElementById('signo');
+var nro2 = document.getElementById('nro2');
+var res = document.getElementById('resultado');
+
+// Condición nro1 >= nro2
+if (operation === '-' && randomNumber < randomNumber2) {
+  location.reload();
+  // Mostrar operacion
+} else {
+  nro1.innerHTML = randomNumber;
+  signo.innerHTML = operation;
+  nro2.innerHTML = randomNumber2;
+}
 
 //  Realizar operacion
 function correctAnswer() {
@@ -39,10 +52,13 @@ function compareAnswers() {
   var userInputValue = document.getElementById('userAnswer').value;
   var correctAnswerValue = correctAnswer();
 
+  var imgResp = document.getElementById('img-res');
+
   if (userInputValue == correctAnswerValue) {
-    document.write('<h2>Correcto!</h2>');
+    res.innerHTML = 'Correcto!!!';
+    imgResp.scr = 'sonic-correcto.webp';
   } else {
-    document.write('<h2>Incorrecto. El resultado correcto es ' + correctAnswerValue + '</h2>');
+    res.innerHTML = 'Incorrecto, la respuesta es ' + correctAnswerValue;
   }
 }
 
