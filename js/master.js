@@ -28,6 +28,9 @@ var nro1 = document.getElementById('nro1');
 var signo = document.getElementById('signo');
 var nro2 = document.getElementById('nro2');
 var res = document.getElementById('resultado');
+var imgResp = document.getElementById("contenedor_img");
+
+imgResp.innerHTML = '<img class="img_respuesta" id="img-res" src="./img/sonic-en-espera.webp" alt="imagen-respuesta">';
 
 // Condición nro1 >= nro2
 if (operation === '-' && randomNumber < randomNumber2) {
@@ -52,13 +55,13 @@ function compareAnswers() {
   var userInputValue = document.getElementById('userAnswer').value;
   var correctAnswerValue = correctAnswer();
 
-  var imgResp = document.getElementById('img-res');
 
   if (userInputValue == correctAnswerValue) {
     res.innerHTML = 'Correcto!!!';
-    imgResp.scr = 'sonic-correcto.webp';
+    imgResp.innerHTML = '<img class="img_respuesta" id="img-res" src="./img/sonic-correcto.webp" alt="imagen-respuesta">';
   } else {
     res.innerHTML = 'Incorrecto, la respuesta es ' + correctAnswerValue;
+    imgResp.innerHTML = '<img class="img_respuesta" id="img-res" src="./img/sonic-incorrecto.jpg" alt="imagen-respuesta">';
   }
 }
 
