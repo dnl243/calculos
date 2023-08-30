@@ -3,7 +3,7 @@
   margin: 0;
 }
 body {
-  background-image: linear-gradient(#fff6, #0000), url(/img/sonic-fondo.jpg);
+  background-image: linear-gradient(#fff6, #0000), url('../img/sonic-fondo.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
